@@ -11,6 +11,7 @@ namespace Lieferverwaltung
         {
             BeispielobjekteAnlegen();
             Console.WriteLine(lieferungen.Count);
+
             string json = ErstelleJson();
             File.WriteAllText("lieferungen.json", json);
             Console.WriteLine("JSON-Datei wurde erstellt.");
@@ -19,9 +20,9 @@ namespace Lieferverwaltung
         static void BeispielobjekteAnlegen()
         {
             lieferungen.Add(new Lieferung(
-                new DateOnly(2024, 06, 22),
-                "HHX05NNW0ZP",
-                "86309"
+                new DateOnly(2024, 06, 22)
+                , "HHX05NNW0ZP"
+                , "86309"
             ));
 
             lieferungen.Add(new Lieferung(
